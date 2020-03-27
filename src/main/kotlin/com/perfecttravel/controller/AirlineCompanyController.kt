@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*
 
 
 @RestController
+@CrossOrigin
 class AirlineCompanyController(private val airlineCompanyService: AirlineCompanyService) {
 
     @GetMapping("/airlines")

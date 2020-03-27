@@ -10,11 +10,11 @@ data class CancellationPolicy (
         @GeneratedValue(strategy= GenerationType.AUTO)
         var id: Long? = null,
 
-        var flightStatus: FlightStatus = FlightStatus.CONFIRMED,
+        var flightStatus: FlightStatus? = FlightStatus.CONFIRMED,
 
         var until: LocalDateTime? = null,
 
-        var lastUpdatedDate: LocalDateTime = LocalDateTime.now(),
+        var lastUpdatedDate: LocalDateTime? = LocalDateTime.now(),
 
         @Column(columnDefinition = "TEXT")
         var generalInfo: String = "",
