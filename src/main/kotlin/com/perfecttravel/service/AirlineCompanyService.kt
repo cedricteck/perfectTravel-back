@@ -15,4 +15,8 @@ class AirlineCompanyService (private val airlineCompanyRepository: AirlineCompan
         return airlineCompanyRepository.save(airlineCompany)
     }
 
+    fun saveAll(airlineCompanies: List<AirlineCompany>): List<AirlineCompany> {
+        return airlineCompanyRepository.saveAll(airlineCompanies)
+    }
+
 }
