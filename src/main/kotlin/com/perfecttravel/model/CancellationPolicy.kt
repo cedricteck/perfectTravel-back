@@ -1,6 +1,6 @@
 package com.perfecttravel.model
 
-import java.time.LocalDateTime
+import java.time.Instant
 import javax.persistence.*
 
 @Entity
@@ -10,11 +10,12 @@ data class CancellationPolicy (
         @GeneratedValue(strategy= GenerationType.AUTO)
         var id: Long? = null,
 
+        @Enumerated(EnumType.STRING)
         var flightStatus: FlightStatus? = FlightStatus.CONFIRMED,
 
-        var until: LocalDateTime? = null,
+        var until: Instant? = null,
 
-        var lastUpdatedDate: LocalDateTime? = LocalDateTime.now(),
+        var lastUpdatedDate: Instant? = Instant.now(),
 
         @Column(columnDefinition = "TEXT")
         var generalInfo: String = "",

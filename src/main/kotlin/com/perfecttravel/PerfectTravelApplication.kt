@@ -1,7 +1,5 @@
 package com.perfecttravel
 
-import com.fasterxml.jackson.databind.DeserializationFeature
-import com.fasterxml.jackson.databind.MappingIterator
 import com.fasterxml.jackson.dataformat.csv.CsvMapper
 import com.fasterxml.jackson.dataformat.csv.CsvSchema
 import com.perfecttravel.model.AirlineCompany
@@ -11,10 +9,6 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.core.io.ClassPathResource
-import org.springframework.core.io.Resource
-import java.io.File
-import java.io.FileReader
-import java.io.Reader
 import javax.annotation.PostConstruct
 
 @SpringBootApplication
