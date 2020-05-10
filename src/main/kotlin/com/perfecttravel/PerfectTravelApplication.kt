@@ -8,11 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.core.io.ClassPathResource
 import javax.annotation.PostConstruct
 
 @SpringBootApplication
-open class PerfectTravelApplication {
+open class PerfectTravelApplication: SpringBootServletInitializer() {
 
     private val csvMapper: CsvMapper = CsvMapper()
     private val bootstrapSchema: CsvSchema = CsvSchema.emptySchema().withHeader().withColumnSeparator(';').withComments()
